@@ -6,7 +6,7 @@
 #
 # Simply get a list of all SysV based services by running the following
 # command:
-# chkconfig --list | awk '{print $1}' > /tmp/services.txt
+# chkconfig --list | grep ":on" | awk '{print $1}' > /tmp/services.txt
 #
 # Go through this list and remove any services which you wish to leave enabled
 # in their default run levels. Then run this script as root in order to
