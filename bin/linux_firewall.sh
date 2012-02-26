@@ -9,7 +9,7 @@ TCP=""
 UDP=""
 
 if [ $(id -u) -ne 0 ]; then
-  echo "Re-run as root to search full file system."
+  echo "Re-run as root to set firewall."
   exit 1
 fi
 
