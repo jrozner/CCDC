@@ -17,9 +17,9 @@ fi
 $iptables -F
 
 # Set default policy for all chains to DROP
-$iptables INPUT DROP
-$iptables FORWARD DROP
-$iptables OUTPUT DROP
+$iptables --policy INPUT DROP
+$iptables --policy FORWARD DROP
+$iptables --policy OUTPUT DROP
 
 # Make sure localhost is really "localhost"
 $iptables -A INPUT -i lo -j ACCEPT
